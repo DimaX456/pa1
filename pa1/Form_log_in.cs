@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using static pa1.TradepaDataSet;
+using pa1.TradepaDataSetTableAdapters;
 
 namespace pa1
 {
@@ -30,7 +31,7 @@ namespace pa1
             SqlDataAdapter adapter = new SqlDataAdapter();
             DataTable table = new DataTable();
 
-            //UserRole
+            ////UserRole
 
             string querystring = $"select UserID, UserLogin, UserPassword, from User where UserLogin = '{LoginUser}' and UserPassword = {LoginPassword}";
 
@@ -85,7 +86,9 @@ namespace pa1
 
         private void linkLabelReg_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            Form_sign_up frmsignup = new Form_sign_up();
+            frmsignup.Show();
+            this.Hide();
         }
 
         private void buttonExit_Click(object sender, EventArgs e)
