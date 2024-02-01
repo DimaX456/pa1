@@ -115,5 +115,12 @@ namespace pa1
             buttonVisible.Visible = true;
             buttonNotVisible.Visible = false;
         }
+
+        private void buttonEnterNotLogIn_Click(object sender, EventArgs e)
+        {
+            Form1 frm1 = new Form1();
+            frm1.Show();
+            this.Hide();
+        }
     }
 }

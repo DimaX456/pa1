@@ -45,5 +45,10 @@ namespace pa1
             FormPUP pup = new FormPUP();
             pup.Show();
         }
+
+        private void выходToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

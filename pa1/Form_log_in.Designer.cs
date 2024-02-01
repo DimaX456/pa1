@@ -37,10 +37,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxUsername = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.buttonExit = new System.Windows.Forms.Button();
             this.buttonVisible = new System.Windows.Forms.Button();
             this.buttonNotVisible = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.buttonEnterNotLogIn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -49,7 +50,7 @@
             // 
             this.linkLabelReg.AutoSize = true;
             this.linkLabelReg.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.linkLabelReg.Location = new System.Drawing.Point(161, 308);
+            this.linkLabelReg.Location = new System.Drawing.Point(161, 350);
             this.linkLabelReg.Name = "linkLabelReg";
             this.linkLabelReg.Size = new System.Drawing.Size(115, 15);
             this.linkLabelReg.TabIndex = 23;
@@ -132,16 +133,6 @@
             this.panel1.Size = new System.Drawing.Size(304, 105);
             this.panel1.TabIndex = 24;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::pa1.Properties.Resources.logo;
-            this.pictureBox1.Location = new System.Drawing.Point(-2, -4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(120, 105);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 25;
-            this.pictureBox1.TabStop = false;
-            // 
             // buttonExit
             // 
             this.buttonExit.Location = new System.Drawing.Point(16, 211);
@@ -172,11 +163,32 @@
             this.buttonNotVisible.UseVisualStyleBackColor = true;
             this.buttonNotVisible.Click += new System.EventHandler(this.buttonNotVisible_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::pa1.Properties.Resources.logo;
+            this.pictureBox1.Location = new System.Drawing.Point(-2, -4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(120, 105);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 25;
+            this.pictureBox1.TabStop = false;
+            // 
+            // buttonEnterNotLogIn
+            // 
+            this.buttonEnterNotLogIn.Location = new System.Drawing.Point(17, 309);
+            this.buttonEnterNotLogIn.Name = "buttonEnterNotLogIn";
+            this.buttonEnterNotLogIn.Size = new System.Drawing.Size(390, 38);
+            this.buttonEnterNotLogIn.TabIndex = 29;
+            this.buttonEnterNotLogIn.Text = "Войти как обычный пользователь";
+            this.buttonEnterNotLogIn.UseVisualStyleBackColor = true;
+            this.buttonEnterNotLogIn.Click += new System.EventHandler(this.buttonEnterNotLogIn_Click);
+            // 
             // Form_log_in
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(419, 329);
+            this.ClientSize = new System.Drawing.Size(419, 374);
+            this.Controls.Add(this.buttonEnterNotLogIn);
             this.Controls.Add(this.buttonNotVisible);
             this.Controls.Add(this.buttonVisible);
             this.Controls.Add(this.buttonExit);
@@ -215,5 +227,6 @@
         private System.Windows.Forms.Button buttonExit;
         private System.Windows.Forms.Button buttonVisible;
         private System.Windows.Forms.Button buttonNotVisible;
+        private System.Windows.Forms.Button buttonEnterNotLogIn;
     }
 }

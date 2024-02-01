@@ -10,6 +10,15 @@ using System.Windows.Forms;
 
 namespace pa1
 {
+
+    enum RowState
+    {
+        Existed,
+        New,
+        Modified,
+        ModifiedNew,
+        Deleted
+    }
     public partial class FormProduct : Form
     {
         public FormProduct()
@@ -58,6 +67,28 @@ namespace pa1
                     }
                 }
             }
+        }
+        private void DeleteRow()
+        {
+            int index = dataGridView1.CurrentCell.RowIndex;
+
+            dataGridView1.Rows[index].Visible = false;
+
+            if (dataGridView1.Rows[index].Cells[0].Value.ToString() == string.Empty)
+            {
+                dataGridView1.Rows[index].Cells[5].Value = RowState.Deleted;
+                return;
+            }
+            dataGridView1.Rows[index].Cells[5].Value = RowState.Deleted;
+        }
+        private void buttonDelete_Click(object sender, EventArgs e)
+        {
+            DeleteRow();
+        }
+
+        private void buttonFilter_Click(object sender, EventArgs e)
+        {
+            productBindingSource.Filter = "'Name ='" + comboBox1.Text + "'";
         }
     }
 }

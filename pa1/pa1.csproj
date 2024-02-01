@@ -60,6 +60,12 @@
     <Compile Include="FormAdd.Designer.cs">
       <DependentUpon>FormAdd.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormChange.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChange.Designer.cs">
+      <DependentUpon>FormChange.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormOrder.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,11 +109,20 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TradepaDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="UserControlFormItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlFormItem.Designer.cs">
+      <DependentUpon>UserControlFormItem.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormAdd.resx">
       <DependentUpon>FormAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormChange.resx">
+      <DependentUpon>FormChange.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormOrder.resx">
       <DependentUpon>FormOrder.cs</DependentUpon>
@@ -137,6 +152,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UserControlFormItem.resx">
+      <DependentUpon>UserControlFormItem.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -169,6 +187,36 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\D378D3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\E245R5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\E530Y6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F346G5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F893T5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\G832G6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\J432E4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\V324R5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\А112Т4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\picture.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
