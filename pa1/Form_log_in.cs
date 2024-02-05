@@ -7,15 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
-using static pa1.TradepaDataSet;
-using pa1.TradepaDataSetTableAdapters;
+//using System.Data.SqlClient;
+//using static pa1.TradepaDataSet;
+//using pa1.TradepaDataSetTableAdapters;
+using pa1.DBContext;
+using Microsoft.EntityFrameworkCore;
+using pa1.Models;
+using pa1.Profiles;
 
 namespace pa1
 {
     public partial class Form_log_in : Form
     {
-        DataBase database = new DataBase();
+        //DataBase database = new DataBase();
         public Form_log_in()
         {
             InitializeComponent();
@@ -24,53 +28,74 @@ namespace pa1
 
         private void buttonLogin_Click(object sender, EventArgs e)
         {
-
-            var LoginUser = textBoxUsername.Text;
-            var LoginPassword = textBoxPassword.Text;
-
-            SqlDataAdapter adapter = new SqlDataAdapter();
-            DataTable table = new DataTable();
-
-            ////UserRole
-
-            string querystring = $"select UserID, UserLogin, UserPassword, from User where UserLogin = '{LoginUser}' and UserPassword = {LoginPassword}";
-
-            SqlCommand command = new SqlCommand(querystring, database.GetConnection());
-
-            adapter.SelectCommand = command;
-            adapter.Fill(table);
-
-            if (table.Rows.Count == 1)
+            using (var db = new pa1Context(DBOptions.Options()))
             {
-                var user = new checkUser(table.Rows[0].ItemArray[1].ToString(), Convert.ToBoolean(table.Rows[0].ItemArray[3]));
+                var LoginUser = textBoxUsername.Text;
+                var LoginPassword = textBoxPassword.Text;
 
-                MessageBox.Show("Вы вошли на свой аккаунт!", "Вход", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                //Form1 frm1 = new Form1(user);
-                Form1 frm1 = new Form1();
-                this.Hide();
-                frm1.ShowDialog();
-                this.Show();
+                if (db.Users.Any(a => a.Username == LoginUser && a.Password == LoginPassword))
+                {
+                    var currentUser = db.Users.FirstOrDefault(a => a.Username == LoginUser && a.Password== LoginPassword);
+                    Form1 frm1 = new Form1();
+                    frm1.Show();
+                    switch (currentUser.RoleID)
+                    {
+                        case 1:
+                        Profiles.Profiles.admin = true; break;
+                        case 2: 
+                        Profiles.Profiles.manager = false; break;
+                        case 3:
+                        Profiles.Profiles.user = false; break;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Вы указали неправильный Логин или Пароль.", "Ошибка");
+                }
             }
-            else
-                MessageBox.Show("Вы указали неправильный Логин или Пароль.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //SqlConnection con = new SqlConnection();
-            //con.ConnectionString = "Data Source=C40312\\SQLEXPRESS;Initial Catalog=Tradepa;Integrated Security=True";
-            //con.Open();
-            //string LoginUser = textBoxUsername.Text;
-            //string LoginPassword = textBoxPassword.Text;
-            //SqlCommand cmd = new SqlCommand("select");
-            //SqlDataAdapter da = new SqlDataAdapter(cmd);
-            //DataTable dt = new DataTable();
-            //da.Fill(dt);
-            //if (dt.Rows.Count > 0)
+            //SqlDataAdapter adapter = new SqlDataAdapter();
+            //DataTable table = new DataTable();
+
+            //////UserRole
+
+            //string querystring = $"select UserID, UserLogin, UserPassword, from User where UserLogin = '{LoginUser}' and UserPassword = {LoginPassword}";
+
+            //SqlCommand command = new SqlCommand(querystring, database.GetConnection());
+
+            //adapter.SelectCommand = command;
+            //adapter.Fill(table);
+
+            //if (table.Rows.Count == 1)
             //{
-            //    MessageBox.Show("");
-            //    System.Diagnostics.Process.Start("");
+            //    var user = new checkUser(table.Rows[0].ItemArray[1].ToString(), Convert.ToBoolean(table.Rows[0].ItemArray[3]));
+
+            //    MessageBox.Show("Вы вошли на свой аккаунт!", "Вход", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //    //Form1 frm1 = new Form1(user);
+            //    Form1 frm1 = new Form1();
+            //    this.Hide();
+            //    frm1.ShowDialog();
+            //    this.Show();
             //}
             //else
-            //{
-            //    MessageBox.Show("");
-            //}
+            //    MessageBox.Show("Вы указали неправильный Логин или Пароль.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            ////SqlConnection con = new SqlConnection();
+            ////con.ConnectionString = "Data Source=C40312\\SQLEXPRESS;Initial Catalog=Tradepa;Integrated Security=True";
+            ////con.Open();
+            ////string LoginUser = textBoxUsername.Text;
+            ////string LoginPassword = textBoxPassword.Text;
+            ////SqlCommand cmd = new SqlCommand("select");
+            ////SqlDataAdapter da = new SqlDataAdapter(cmd);
+            ////DataTable dt = new DataTable();
+            ////da.Fill(dt);
+            ////if (dt.Rows.Count > 0)
+            ////{
+            ////    MessageBox.Show("");
+            ////    System.Diagnostics.Process.Start("");
+            ////}
+            ////else
+            ////{
+            ////    MessageBox.Show("");
+            ////}
 
         }
 
@@ -118,6 +143,7 @@ namespace pa1
 
         private void buttonEnterNotLogIn_Click(object sender, EventArgs e)
         {
+            Profiles.Profiles.user = true;
             Form1 frm1 = new Form1();
             frm1.Show();
             this.Hide();

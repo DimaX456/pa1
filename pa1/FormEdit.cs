@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace pa1
 {
-    public partial class UserControlFormItem : UserControl
+    public partial class FormEdit : Form
     {
-        public UserControlFormItem()
+        public FormEdit()
         {
             InitializeComponent();
         }

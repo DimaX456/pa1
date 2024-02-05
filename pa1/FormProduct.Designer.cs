@@ -29,18 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.Label productPhotoLabel;
-            System.Windows.Forms.Label productDescriptionLabel;
-            System.Windows.Forms.Label productQuantityInStockLabel;
-            System.Windows.Forms.Label productDiscountAmountLabel;
-            System.Windows.Forms.Label productCategoryLabel;
-            System.Windows.Forms.Label productStatusLabel;
-            System.Windows.Forms.Label productManufacturerLabel;
-            System.Windows.Forms.Label productMaxSizeDiscountAmountLabel;
-            System.Windows.Forms.Label productCostLabel;
-            System.Windows.Forms.Label productUnitLabel;
-            System.Windows.Forms.Label productNameLabel;
-            System.Windows.Forms.Label productArticleNumberLabel;
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.buttonExit = new System.Windows.Forms.Button();
@@ -72,31 +60,6 @@
             this.tradepaDataSet = new pa1.TradepaDataSet();
             this.productTableAdapter = new pa1.TradepaDataSetTableAdapters.ProductTableAdapter();
             this.buttonFilter = new System.Windows.Forms.Button();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.productPhotoTextBox = new System.Windows.Forms.TextBox();
-            this.productDescriptionTextBox = new System.Windows.Forms.TextBox();
-            this.productQuantityInStockTextBox = new System.Windows.Forms.TextBox();
-            this.productDiscountAmountTextBox = new System.Windows.Forms.TextBox();
-            this.productCategoryTextBox = new System.Windows.Forms.TextBox();
-            this.productStatusTextBox = new System.Windows.Forms.TextBox();
-            this.productManufacturerTextBox = new System.Windows.Forms.TextBox();
-            this.productMaxSizeDiscountAmountTextBox = new System.Windows.Forms.TextBox();
-            this.productCostTextBox = new System.Windows.Forms.TextBox();
-            this.productUnitTextBox = new System.Windows.Forms.TextBox();
-            this.productNameTextBox = new System.Windows.Forms.TextBox();
-            this.productArticleNumberTextBox = new System.Windows.Forms.TextBox();
-            productPhotoLabel = new System.Windows.Forms.Label();
-            productDescriptionLabel = new System.Windows.Forms.Label();
-            productQuantityInStockLabel = new System.Windows.Forms.Label();
-            productDiscountAmountLabel = new System.Windows.Forms.Label();
-            productCategoryLabel = new System.Windows.Forms.Label();
-            productStatusLabel = new System.Windows.Forms.Label();
-            productManufacturerLabel = new System.Windows.Forms.Label();
-            productMaxSizeDiscountAmountLabel = new System.Windows.Forms.Label();
-            productCostLabel = new System.Windows.Forms.Label();
-            productUnitLabel = new System.Windows.Forms.Label();
-            productNameLabel = new System.Windows.Forms.Label();
-            productArticleNumberLabel = new System.Windows.Forms.Label();
             this.statusStrip1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -104,7 +67,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tradepaDataSet)).BeginInit();
-            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // statusStrip1
@@ -113,7 +75,7 @@
             this.toolStripStatusLabel1});
             this.statusStrip1.Location = new System.Drawing.Point(0, 442);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1261, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(801, 22);
             this.statusStrip1.TabIndex = 29;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -359,237 +321,11 @@
             this.buttonFilter.UseVisualStyleBackColor = true;
             this.buttonFilter.Click += new System.EventHandler(this.buttonFilter_Click);
             // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(productPhotoLabel);
-            this.groupBox4.Controls.Add(this.productPhotoTextBox);
-            this.groupBox4.Controls.Add(productDescriptionLabel);
-            this.groupBox4.Controls.Add(this.productDescriptionTextBox);
-            this.groupBox4.Controls.Add(productQuantityInStockLabel);
-            this.groupBox4.Controls.Add(this.productQuantityInStockTextBox);
-            this.groupBox4.Controls.Add(productDiscountAmountLabel);
-            this.groupBox4.Controls.Add(this.productDiscountAmountTextBox);
-            this.groupBox4.Controls.Add(productCategoryLabel);
-            this.groupBox4.Controls.Add(this.productCategoryTextBox);
-            this.groupBox4.Controls.Add(productStatusLabel);
-            this.groupBox4.Controls.Add(this.productStatusTextBox);
-            this.groupBox4.Controls.Add(productManufacturerLabel);
-            this.groupBox4.Controls.Add(this.productManufacturerTextBox);
-            this.groupBox4.Controls.Add(productMaxSizeDiscountAmountLabel);
-            this.groupBox4.Controls.Add(this.productMaxSizeDiscountAmountTextBox);
-            this.groupBox4.Controls.Add(productCostLabel);
-            this.groupBox4.Controls.Add(this.productCostTextBox);
-            this.groupBox4.Controls.Add(productUnitLabel);
-            this.groupBox4.Controls.Add(this.productUnitTextBox);
-            this.groupBox4.Controls.Add(productNameLabel);
-            this.groupBox4.Controls.Add(this.productNameTextBox);
-            this.groupBox4.Controls.Add(productArticleNumberLabel);
-            this.groupBox4.Controls.Add(this.productArticleNumberTextBox);
-            this.groupBox4.Location = new System.Drawing.Point(795, 13);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(454, 425);
-            this.groupBox4.TabIndex = 31;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Редактирование";
-            // 
-            // productPhotoLabel
-            // 
-            productPhotoLabel.AutoSize = true;
-            productPhotoLabel.Location = new System.Drawing.Point(8, 359);
-            productPhotoLabel.Name = "productPhotoLabel";
-            productPhotoLabel.Size = new System.Drawing.Size(78, 13);
-            productPhotoLabel.TabIndex = 71;
-            productPhotoLabel.Text = "Product Photo:";
-            // 
-            // productPhotoTextBox
-            // 
-            this.productPhotoTextBox.Location = new System.Drawing.Point(189, 356);
-            this.productPhotoTextBox.Name = "productPhotoTextBox";
-            this.productPhotoTextBox.Size = new System.Drawing.Size(259, 20);
-            this.productPhotoTextBox.TabIndex = 72;
-            // 
-            // productDescriptionLabel
-            // 
-            productDescriptionLabel.AutoSize = true;
-            productDescriptionLabel.Location = new System.Drawing.Point(6, 328);
-            productDescriptionLabel.Name = "productDescriptionLabel";
-            productDescriptionLabel.Size = new System.Drawing.Size(103, 13);
-            productDescriptionLabel.TabIndex = 69;
-            productDescriptionLabel.Text = "Product Description:";
-            // 
-            // productDescriptionTextBox
-            // 
-            this.productDescriptionTextBox.Location = new System.Drawing.Point(189, 325);
-            this.productDescriptionTextBox.Name = "productDescriptionTextBox";
-            this.productDescriptionTextBox.Size = new System.Drawing.Size(259, 20);
-            this.productDescriptionTextBox.TabIndex = 70;
-            // 
-            // productQuantityInStockLabel
-            // 
-            productQuantityInStockLabel.AutoSize = true;
-            productQuantityInStockLabel.Location = new System.Drawing.Point(6, 296);
-            productQuantityInStockLabel.Name = "productQuantityInStockLabel";
-            productQuantityInStockLabel.Size = new System.Drawing.Size(132, 13);
-            productQuantityInStockLabel.TabIndex = 67;
-            productQuantityInStockLabel.Text = "Product Quantity In Stock:";
-            // 
-            // productQuantityInStockTextBox
-            // 
-            this.productQuantityInStockTextBox.Location = new System.Drawing.Point(189, 289);
-            this.productQuantityInStockTextBox.Name = "productQuantityInStockTextBox";
-            this.productQuantityInStockTextBox.Size = new System.Drawing.Size(259, 20);
-            this.productQuantityInStockTextBox.TabIndex = 68;
-            // 
-            // productDiscountAmountLabel
-            // 
-            productDiscountAmountLabel.AutoSize = true;
-            productDiscountAmountLabel.Location = new System.Drawing.Point(6, 263);
-            productDiscountAmountLabel.Name = "productDiscountAmountLabel";
-            productDiscountAmountLabel.Size = new System.Drawing.Size(131, 13);
-            productDiscountAmountLabel.TabIndex = 65;
-            productDiscountAmountLabel.Text = "Product Discount Amount:";
-            // 
-            // productDiscountAmountTextBox
-            // 
-            this.productDiscountAmountTextBox.Location = new System.Drawing.Point(189, 260);
-            this.productDiscountAmountTextBox.Name = "productDiscountAmountTextBox";
-            this.productDiscountAmountTextBox.Size = new System.Drawing.Size(259, 20);
-            this.productDiscountAmountTextBox.TabIndex = 66;
-            // 
-            // productCategoryLabel
-            // 
-            productCategoryLabel.AutoSize = true;
-            productCategoryLabel.Location = new System.Drawing.Point(6, 233);
-            productCategoryLabel.Name = "productCategoryLabel";
-            productCategoryLabel.Size = new System.Drawing.Size(92, 13);
-            productCategoryLabel.TabIndex = 63;
-            productCategoryLabel.Text = "Product Category:";
-            // 
-            // productCategoryTextBox
-            // 
-            this.productCategoryTextBox.Location = new System.Drawing.Point(189, 233);
-            this.productCategoryTextBox.Name = "productCategoryTextBox";
-            this.productCategoryTextBox.Size = new System.Drawing.Size(259, 20);
-            this.productCategoryTextBox.TabIndex = 64;
-            // 
-            // productStatusLabel
-            // 
-            productStatusLabel.AutoSize = true;
-            productStatusLabel.Location = new System.Drawing.Point(6, 204);
-            productStatusLabel.Name = "productStatusLabel";
-            productStatusLabel.Size = new System.Drawing.Size(80, 13);
-            productStatusLabel.TabIndex = 61;
-            productStatusLabel.Text = "Product Status:";
-            // 
-            // productStatusTextBox
-            // 
-            this.productStatusTextBox.Location = new System.Drawing.Point(189, 204);
-            this.productStatusTextBox.Name = "productStatusTextBox";
-            this.productStatusTextBox.Size = new System.Drawing.Size(259, 20);
-            this.productStatusTextBox.TabIndex = 62;
-            // 
-            // productManufacturerLabel
-            // 
-            productManufacturerLabel.AutoSize = true;
-            productManufacturerLabel.Location = new System.Drawing.Point(6, 177);
-            productManufacturerLabel.Name = "productManufacturerLabel";
-            productManufacturerLabel.Size = new System.Drawing.Size(113, 13);
-            productManufacturerLabel.TabIndex = 59;
-            productManufacturerLabel.Text = "Product Manufacturer:";
-            // 
-            // productManufacturerTextBox
-            // 
-            this.productManufacturerTextBox.Location = new System.Drawing.Point(189, 174);
-            this.productManufacturerTextBox.Name = "productManufacturerTextBox";
-            this.productManufacturerTextBox.Size = new System.Drawing.Size(259, 20);
-            this.productManufacturerTextBox.TabIndex = 60;
-            // 
-            // productMaxSizeDiscountAmountLabel
-            // 
-            productMaxSizeDiscountAmountLabel.AutoSize = true;
-            productMaxSizeDiscountAmountLabel.Location = new System.Drawing.Point(6, 148);
-            productMaxSizeDiscountAmountLabel.Name = "productMaxSizeDiscountAmountLabel";
-            productMaxSizeDiscountAmountLabel.Size = new System.Drawing.Size(177, 13);
-            productMaxSizeDiscountAmountLabel.TabIndex = 57;
-            productMaxSizeDiscountAmountLabel.Text = "Product Max Size Discount Amount:";
-            // 
-            // productMaxSizeDiscountAmountTextBox
-            // 
-            this.productMaxSizeDiscountAmountTextBox.Location = new System.Drawing.Point(189, 145);
-            this.productMaxSizeDiscountAmountTextBox.Name = "productMaxSizeDiscountAmountTextBox";
-            this.productMaxSizeDiscountAmountTextBox.Size = new System.Drawing.Size(259, 20);
-            this.productMaxSizeDiscountAmountTextBox.TabIndex = 58;
-            // 
-            // productCostLabel
-            // 
-            productCostLabel.AutoSize = true;
-            productCostLabel.Location = new System.Drawing.Point(6, 116);
-            productCostLabel.Name = "productCostLabel";
-            productCostLabel.Size = new System.Drawing.Size(71, 13);
-            productCostLabel.TabIndex = 55;
-            productCostLabel.Text = "Product Cost:";
-            // 
-            // productCostTextBox
-            // 
-            this.productCostTextBox.Location = new System.Drawing.Point(189, 113);
-            this.productCostTextBox.Name = "productCostTextBox";
-            this.productCostTextBox.Size = new System.Drawing.Size(259, 20);
-            this.productCostTextBox.TabIndex = 56;
-            // 
-            // productUnitLabel
-            // 
-            productUnitLabel.AutoSize = true;
-            productUnitLabel.Location = new System.Drawing.Point(6, 83);
-            productUnitLabel.Name = "productUnitLabel";
-            productUnitLabel.Size = new System.Drawing.Size(69, 13);
-            productUnitLabel.TabIndex = 53;
-            productUnitLabel.Text = "Product Unit:";
-            // 
-            // productUnitTextBox
-            // 
-            this.productUnitTextBox.Location = new System.Drawing.Point(189, 83);
-            this.productUnitTextBox.Name = "productUnitTextBox";
-            this.productUnitTextBox.Size = new System.Drawing.Size(259, 20);
-            this.productUnitTextBox.TabIndex = 54;
-            // 
-            // productNameLabel
-            // 
-            productNameLabel.AutoSize = true;
-            productNameLabel.Location = new System.Drawing.Point(6, 54);
-            productNameLabel.Name = "productNameLabel";
-            productNameLabel.Size = new System.Drawing.Size(78, 13);
-            productNameLabel.TabIndex = 51;
-            productNameLabel.Text = "Product Name:";
-            // 
-            // productNameTextBox
-            // 
-            this.productNameTextBox.Location = new System.Drawing.Point(189, 54);
-            this.productNameTextBox.Name = "productNameTextBox";
-            this.productNameTextBox.Size = new System.Drawing.Size(259, 20);
-            this.productNameTextBox.TabIndex = 52;
-            // 
-            // productArticleNumberLabel
-            // 
-            productArticleNumberLabel.AutoSize = true;
-            productArticleNumberLabel.Location = new System.Drawing.Point(6, 26);
-            productArticleNumberLabel.Name = "productArticleNumberLabel";
-            productArticleNumberLabel.Size = new System.Drawing.Size(119, 13);
-            productArticleNumberLabel.TabIndex = 49;
-            productArticleNumberLabel.Text = "Product Article Number:";
-            // 
-            // productArticleNumberTextBox
-            // 
-            this.productArticleNumberTextBox.Location = new System.Drawing.Point(189, 23);
-            this.productArticleNumberTextBox.Name = "productArticleNumberTextBox";
-            this.productArticleNumberTextBox.Size = new System.Drawing.Size(259, 20);
-            this.productArticleNumberTextBox.TabIndex = 50;
-            // 
             // FormProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1261, 464);
-            this.Controls.Add(this.groupBox4);
+            this.ClientSize = new System.Drawing.Size(801, 464);
             this.Controls.Add(this.buttonFilter);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.buttonExit);
@@ -614,8 +350,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tradepaDataSet)).EndInit();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -654,18 +388,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn productDescriptionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn productPhotoDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button buttonFilter;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.TextBox productPhotoTextBox;
-        private System.Windows.Forms.TextBox productDescriptionTextBox;
-        private System.Windows.Forms.TextBox productQuantityInStockTextBox;
-        private System.Windows.Forms.TextBox productDiscountAmountTextBox;
-        private System.Windows.Forms.TextBox productCategoryTextBox;
-        private System.Windows.Forms.TextBox productStatusTextBox;
-        private System.Windows.Forms.TextBox productManufacturerTextBox;
-        private System.Windows.Forms.TextBox productMaxSizeDiscountAmountTextBox;
-        private System.Windows.Forms.TextBox productCostTextBox;
-        private System.Windows.Forms.TextBox productUnitTextBox;
-        private System.Windows.Forms.TextBox productNameTextBox;
-        private System.Windows.Forms.TextBox productArticleNumberTextBox;
     }
 }
