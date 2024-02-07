@@ -9,12 +9,14 @@ namespace pa1.Models
 {
     public partial class User
     {
-        public string Username { get; set; } = null;
+        public int UserId { get; set; }
+        public string UserSurname { get; set; }
+        public string UserName { get; set; }
+        public string UserPatronymic { get; set; }
+        public string UserLogin { get; set; }
+        public string UserPassword { get; set; }
+        public int UserRole { get; set; }
 
-        public string Password { get; set; } = null;
-
-        public int RoleID { get; set; }
-
-        public virtual Role Role { get; set; } = null;
+        public virtual Role UserRoleNavigation { get; set; }
     }
 }

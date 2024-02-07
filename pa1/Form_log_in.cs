@@ -28,17 +28,17 @@ namespace pa1
 
         private void buttonLogin_Click(object sender, EventArgs e)
         {
-            using (var db = new pa1Context(DBOptions.Options()))
+            using (var db = new TradeContext(DataBaseHelper.Option()))
             {
                 var LoginUser = textBoxUsername.Text;
                 var LoginPassword = textBoxPassword.Text;
 
-                if (db.Users.Any(a => a.Username == LoginUser && a.Password == LoginPassword))
+                if (db.User.Any(a => a.UserName == LoginUser && a.UserPassword == LoginPassword))
                 {
-                    var currentUser = db.Users.FirstOrDefault(a => a.Username == LoginUser && a.Password== LoginPassword);
+                    var currentUser = db.User.FirstOrDefault(a => a.UserName == LoginUser && a.UserPassword == LoginPassword);
                     Form1 frm1 = new Form1();
                     frm1.Show();
-                    switch (currentUser.RoleID)
+                    switch (currentUser.UserId)
                     {
                         case 1:
                         Profiles.Profiles.admin = true; break;

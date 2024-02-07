@@ -188,9 +188,9 @@
   <ItemGroup>
     <Compile Include="checkUser.cs" />
     <Compile Include="DataBase.cs" />
-    <Compile Include="DBContext\DBOptions.cs" />
-    <Compile Include="DBContext\pa1Context.cs" />
-    <Compile Include="DBContext\SampleContext.cs" />
+    <Compile Include="DBContext\DataBaseHelper.cs" />
+    <Compile Include="DBContext\SampleContextFactory.cs" />
+    <Compile Include="DBContext\TradeContext.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -257,9 +257,11 @@
     <Compile Include="Form_sign_up.Designer.cs">
       <DependentUpon>Form_sign_up.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\Perfume.cs" />
+    <Compile Include="Models\Order.cs" />
+    <Compile Include="Models\OrderProduct.cs" />
+    <Compile Include="Models\PickupPoint.cs" />
+    <Compile Include="Models\Product.cs" />
     <Compile Include="Models\Role.cs" />
-    <Compile Include="Models\Type.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Profiles\Profiles.cs" />
     <Compile Include="Program.cs" />

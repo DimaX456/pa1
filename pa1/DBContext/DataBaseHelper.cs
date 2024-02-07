@@ -9,19 +9,19 @@ using System.Threading.Tasks;
 
 namespace pa1.DBContext
 {
-    public class DBOptions
+    public class DataBaseHelper
     {
-       public static DbContextOptions<pa1Context> Options()
+        public static DbContextOptions<TradeContext> Option()
         {
             var builder = new ConfigurationBuilder();
             builder.SetBasePath(Directory.GetCurrentDirectory());
             builder.AddJsonFile("appsettings.json");
             var config = builder.Build();
             string connectionString = config.GetConnectionString("DefaultConnection");
-            var optionsBuilder = new DbContextOptionsBuilder<pa1Context>();
+            var optionsBuilder = new DbContextOptionsBuilder<TradeContext>();
             return optionsBuilder
-                .UseSqlServer(connectionString)
-                .Options;
+                    .UseSqlServer(connectionString)
+                    .Options;
         }
     }
 }

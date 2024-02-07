@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,10 +10,12 @@ namespace pa1.Models
     {
         public Role()
         {
-            Users = new HashSet<User>();
+            User = new HashSet<User>();
         }
-        public int IDRole { get; set;  }
-        public string NameRole { get; set; } = null;
-        public virtual ICollection<User> Users { get; set; }
+
+        public int RoleId { get; set; }
+        public string RoleName { get; set; }
+
+        public virtual ICollection<User> User { get; set; }
     }
 }
