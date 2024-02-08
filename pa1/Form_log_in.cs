@@ -40,7 +40,8 @@ namespace pa1
                         return;
                     }
 
-                    USER = user;
+                MessageBox.Show("Вы вошли на свой аккаунт!", "Вход", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                USER = user;
 
                     Form1 frm1 = new Form1();
                     this.Hide();

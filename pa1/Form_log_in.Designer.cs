@@ -50,7 +50,7 @@
             // 
             this.linkLabelReg.AutoSize = true;
             this.linkLabelReg.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.linkLabelReg.Location = new System.Drawing.Point(161, 350);
+            this.linkLabelReg.Location = new System.Drawing.Point(157, 306);
             this.linkLabelReg.Name = "linkLabelReg";
             this.linkLabelReg.Size = new System.Drawing.Size(115, 15);
             this.linkLabelReg.TabIndex = 23;
@@ -61,7 +61,7 @@
             // buttonLogin
             // 
             this.buttonLogin.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonLogin.Location = new System.Drawing.Point(17, 257);
+            this.buttonLogin.Location = new System.Drawing.Point(16, 170);
             this.buttonLogin.Name = "buttonLogin";
             this.buttonLogin.Size = new System.Drawing.Size(390, 45);
             this.buttonLogin.TabIndex = 22;
@@ -72,9 +72,9 @@
             // buttonClear
             // 
             this.buttonClear.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonClear.Location = new System.Drawing.Point(16, 170);
+            this.buttonClear.Location = new System.Drawing.Point(341, 114);
             this.buttonClear.Name = "buttonClear";
-            this.buttonClear.Size = new System.Drawing.Size(391, 34);
+            this.buttonClear.Size = new System.Drawing.Size(65, 23);
             this.buttonClear.TabIndex = 21;
             this.buttonClear.Text = "Очистить";
             this.buttonClear.UseVisualStyleBackColor = true;
@@ -135,7 +135,7 @@
             // 
             // buttonExit
             // 
-            this.buttonExit.Location = new System.Drawing.Point(16, 211);
+            this.buttonExit.Location = new System.Drawing.Point(16, 263);
             this.buttonExit.Name = "buttonExit";
             this.buttonExit.Size = new System.Drawing.Size(391, 40);
             this.buttonExit.TabIndex = 26;
@@ -175,7 +175,7 @@
             // 
             // buttonEnterNotLogIn
             // 
-            this.buttonEnterNotLogIn.Location = new System.Drawing.Point(17, 309);
+            this.buttonEnterNotLogIn.Location = new System.Drawing.Point(16, 221);
             this.buttonEnterNotLogIn.Name = "buttonEnterNotLogIn";
             this.buttonEnterNotLogIn.Size = new System.Drawing.Size(390, 38);
             this.buttonEnterNotLogIn.TabIndex = 29;
@@ -187,7 +187,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(419, 374);
+            this.ClientSize = new System.Drawing.Size(419, 325);
             this.Controls.Add(this.buttonEnterNotLogIn);
             this.Controls.Add(this.buttonNotVisible);
             this.Controls.Add(this.buttonVisible);
@@ -202,7 +202,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxUsername);
             this.Name = "Form_log_in";
-            this.Text = "Form_log_in";
+            this.Text = "Авторизация";
             this.Load += new System.EventHandler(this.Form_log_in_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

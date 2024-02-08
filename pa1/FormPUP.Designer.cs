@@ -32,18 +32,18 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.назадToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.tradepaDataSet = new pa1.TradepaDataSet();
-            this.pickUpPointBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pickUpPointTableAdapter = new pa1.TradepaDataSetTableAdapters.PickUpPointTableAdapter();
             this.idPickUpPointDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mailIndexPUPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cityPUPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.streetPUPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.numberHousePUPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pickUpPointBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tradepaDataSet = new pa1.TradepaDataSet();
+            this.pickUpPointTableAdapter = new pa1.TradepaDataSetTableAdapters.PickUpPointTableAdapter();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tradepaDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pickUpPointBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tradepaDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -80,20 +80,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(549, 409);
             this.dataGridView1.TabIndex = 1;
             // 
-            // tradepaDataSet
-            // 
-            this.tradepaDataSet.DataSetName = "TradepaDataSet";
-            this.tradepaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // pickUpPointBindingSource
-            // 
-            this.pickUpPointBindingSource.DataMember = "PickUpPoint";
-            this.pickUpPointBindingSource.DataSource = this.tradepaDataSet;
-            // 
-            // pickUpPointTableAdapter
-            // 
-            this.pickUpPointTableAdapter.ClearBeforeFill = true;
-            // 
             // idPickUpPointDataGridViewTextBoxColumn
             // 
             this.idPickUpPointDataGridViewTextBoxColumn.DataPropertyName = "id_PickUpPoint";
@@ -124,6 +110,20 @@
             this.numberHousePUPDataGridViewTextBoxColumn.HeaderText = "NumberHouse_PUP";
             this.numberHousePUPDataGridViewTextBoxColumn.Name = "numberHousePUPDataGridViewTextBoxColumn";
             // 
+            // pickUpPointBindingSource
+            // 
+            this.pickUpPointBindingSource.DataMember = "PickUpPoint";
+            this.pickUpPointBindingSource.DataSource = this.tradepaDataSet;
+            // 
+            // tradepaDataSet
+            // 
+            this.tradepaDataSet.DataSetName = "TradepaDataSet";
+            this.tradepaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // pickUpPointTableAdapter
+            // 
+            this.pickUpPointTableAdapter.ClearBeforeFill = true;
+            // 
             // FormPUP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -133,13 +133,13 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FormPUP";
-            this.Text = "FormPUP";
+            this.Text = "Пункт выдачи";
             this.Load += new System.EventHandler(this.FormPUP_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tradepaDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pickUpPointBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tradepaDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

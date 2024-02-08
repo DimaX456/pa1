@@ -50,5 +50,11 @@ namespace pa1
         {
             this.Close();
         }
+
+        private void просмотрТоваровToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormShop frmshop = new FormShop();
+            frmshop.Show();
+        }
     }
 }

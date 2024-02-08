@@ -129,7 +129,9 @@
     <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.10.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
     </Reference>
@@ -186,75 +188,55 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="checkUser.cs" />
-    <Compile Include="DataBase.cs" />
     <Compile Include="DBContext\DataBaseHelper.cs" />
     <Compile Include="DBContext\SampleContextFactory.cs" />
     <Compile Include="DBContext\TradeContext.cs" />
-    <Compile Include="Forms\Form1.cs">
+    <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form1.Designer.cs">
+    <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FormAdd.cs">
+    <Compile Include="FormEdit.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FormAdd.Designer.cs">
-      <DependentUpon>FormAdd.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\FormChange.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\FormChange.Designer.cs">
-      <DependentUpon>FormChange.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\FormEdit.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\FormEdit.Designer.cs">
+    <Compile Include="FormEdit.Designer.cs">
       <DependentUpon>FormEdit.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FormOrder.cs">
+    <Compile Include="FormOrder.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FormOrder.Designer.cs">
+    <Compile Include="FormOrder.Designer.cs">
       <DependentUpon>FormOrder.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FormProduct.cs">
+    <Compile Include="FormProduct.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FormProduct.Designer.cs">
+    <Compile Include="FormProduct.Designer.cs">
       <DependentUpon>FormProduct.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FormPUP.cs">
+    <Compile Include="FormPUP.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FormPUP.Designer.cs">
+    <Compile Include="FormPUP.Designer.cs">
       <DependentUpon>FormPUP.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FormShop.cs">
+    <Compile Include="FormShop.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FormShop.Designer.cs">
+    <Compile Include="FormShop.Designer.cs">
       <DependentUpon>FormShop.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FormView.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Forms\FormView.Designer.cs">
-      <DependentUpon>FormView.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Form_log_in.cs">
+    <Compile Include="Form_log_in.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form_log_in.Designer.cs">
+    <Compile Include="Form_log_in.Designer.cs">
       <DependentUpon>Form_log_in.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Form_sign_up.cs">
+    <Compile Include="Form_sign_up.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form_sign_up.Designer.cs">
+    <Compile Include="Form_sign_up.Designer.cs">
       <DependentUpon>Form_sign_up.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Order.cs" />
@@ -271,37 +253,34 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TradepaDataSet.xsd</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Forms\Form1.resx">
+    <Compile Include="UserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl1.Designer.cs">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FormAdd.resx">
-      <DependentUpon>FormAdd.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FormChange.resx">
-      <DependentUpon>FormChange.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FormEdit.resx">
+    <EmbeddedResource Include="FormEdit.resx">
       <DependentUpon>FormEdit.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FormOrder.resx">
+    <EmbeddedResource Include="FormOrder.resx">
       <DependentUpon>FormOrder.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FormProduct.resx">
+    <EmbeddedResource Include="FormProduct.resx">
       <DependentUpon>FormProduct.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FormPUP.resx">
+    <EmbeddedResource Include="FormPUP.resx">
       <DependentUpon>FormPUP.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FormShop.resx">
+    <EmbeddedResource Include="FormShop.resx">
       <DependentUpon>FormShop.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FormView.resx">
-      <DependentUpon>FormView.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form_log_in.resx">
+    <EmbeddedResource Include="Form_log_in.resx">
       <DependentUpon>Form_log_in.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form_sign_up.resx">
+    <EmbeddedResource Include="Form_sign_up.resx">
       <DependentUpon>Form_sign_up.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -314,6 +293,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UserControl1.resx">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

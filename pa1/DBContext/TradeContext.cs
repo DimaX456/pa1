@@ -127,7 +127,6 @@ namespace pa1.DBContext
                 entity.Property(e => e.ProductName).IsRequired();
 
                 entity.Property(e => e.ProductPhoto)
-                    .IsRequired()
                     .HasColumnType("image");
 
                 entity.Property(e => e.ProductStatus).IsRequired();

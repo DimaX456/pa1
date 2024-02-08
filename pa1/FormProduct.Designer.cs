@@ -338,7 +338,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "FormProduct";
-            this.Text = "FormProduct";
+            this.Text = "Продукты ver.1.0";
             this.Load += new System.EventHandler(this.FormProduct_Load);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
